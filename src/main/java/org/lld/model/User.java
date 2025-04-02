@@ -2,7 +2,9 @@ package org.lld.model;
 
 import org.lld.notifications.Notification;
 import org.lld.notifications.NotificationFactory;
+import org.lld.notifications.NotificationManager;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class User {
@@ -15,6 +17,7 @@ public class User {
         this.name = name;
         this.email = email;
         this.phoneNo = phoneNo;
+        this.subscribedChannels = new HashSet<>();
     }
 
     public void subscribe(String channel){
@@ -28,7 +31,7 @@ public class User {
     public void sendNotifications(String message){
         for(String channel : subscribedChannels){
             Notification notification = NotificationFactory.createNotification(channel, name, message);
-
+            NotificationManager.getInstance().addNotification(notification);
         }
     }
 
