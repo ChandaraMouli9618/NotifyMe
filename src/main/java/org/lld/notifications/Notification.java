@@ -1,6 +1,6 @@
 package org.lld.notifications;
 
-abstract class Notification {
+public abstract class Notification {
     String recipient;
     String message;
 
