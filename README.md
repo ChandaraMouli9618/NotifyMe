@@ -14,8 +14,6 @@ The system follows **best practices** using various **design patterns** to ensur
 - ✅ **User Preferences** - Users can subscribe/unsubscribe from notifications.
 - ✅ **Batch Processing** - Efficiently processes multiple notifications at once.
 - ✅ **Scalable & Extensible** - Easily add new notification types like WhatsApp, Slack, etc.
-- ✅ **Retry Mechanism** - Retries failed notifications.
-- ✅ **Asynchronous Processing** - Uses queues for efficient notification dispatch.
 
 ---
 
